@@ -21,6 +21,12 @@ public class Uploader {
 			state = Base64Uploader.save(this.request.getParameter(filedName),
 					this.conf);
 		} else {
+			/**
+			 * 自定义上传图片路径
+			 * /ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}
+			 * */
+			this.conf.put("rootPath",ImageUtil.DISKPATH);
+			this.conf.put("savePath","/upload/ueditor/image/{yyyy}{mm}{dd}/{time}{rand:6}");
 			state = BinaryUploader.save(this.request, this.conf);
 		}
 
