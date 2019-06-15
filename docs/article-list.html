@@ -209,7 +209,7 @@
 
 		function selectInfPage(currentPage, pageSize) {
 			$.ajax({
-				url: "http://39.104.181.212/text/getListByPage.do", //查
+				url: "https://39.104.181.212/text/getListByPage.do", //查
 				type: "get",
 				data: {
 					currentPage: currentPage,
@@ -332,7 +332,7 @@
 		function del_only(id) {
 			layer.confirm('确认要删除吗？', function () {
 				$.ajax({
-					url: "http://39.104.181.212/text/del.do", //删除产品信息
+					url: "https://39.104.181.212/text/del.do", //删除产品信息
 					type: "post",
 					data: {
 						ids: id
@@ -371,7 +371,7 @@
 					}
 				}
 				//如果上面的条件成立，才进行删除操作
-				var url = "http://39.104.181.212/text/del.do";
+				var url = "https://39.104.181.212/text/del.do";
 				layer.confirm('您确定要删除该选中数据吗?', { btn: ['确定', '取消'], title: "提示" }, function () {
 					$.ajax({
 						type: "post",
@@ -413,7 +413,7 @@
 			var jcbg_title = $("#jcbg_title").val();
 			//console.log(jcbg_name);
 			$.ajax({
-				url: "http://39.104.181.212/text/getListByPage.do",//搜索接口
+				url: "https://39.104.181.212/text/getListByPage.do",//搜索接口
 				type: 'get',
 				dataType: 'json',
 				data: {
